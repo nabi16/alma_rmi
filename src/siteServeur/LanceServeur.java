@@ -12,6 +12,8 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
 
+import founisseurs.Fournisseur;
+
 /**
  *
  * @author user
@@ -35,10 +37,9 @@ public class LanceServeur {
             String url = "rmi://" + InetAddress.getLocalHost().getHostAddress() + "/TestRMI";
             //System.out.println("Enregistrement de l'objet avec l'url : " + url);
             registry.rebind(url, sci);
-           // Naming.rebind(url, informationImpl);
-           
+          
             System.out.println("Serveur lancé");
-            
+            Fournisseur f = new Fournisseur();
         } catch (RemoteException e) {
             e.printStackTrace();
         }  catch (UnknownHostException e) {

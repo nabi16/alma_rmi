@@ -96,7 +96,7 @@ public class ClientWindow extends javax.swing.JFrame {
             panWest.add(listSubjects);
             
         } catch (RemoteException ex) {
-            Logger.getLogger(Client_old.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ClientWindow.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
